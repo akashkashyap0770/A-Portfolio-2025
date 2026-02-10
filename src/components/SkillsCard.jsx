@@ -2,11 +2,16 @@ import React from "react";
 
 function SkillsCard({ icon, title, text }) {
     return (
-        <article className="bg-white rounded-lg p-6 sm:p-8 w-full h-64 sm:h-72 md:h-80 flex flex-col justify-between text-center sm:text-left">
-            <span className="text-4xl">{icon}</span>
+        <article className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full p-4 sm:p-6 md:p-8 flex flex-col items-center gap-3 sm:gap-4 text-center">
+            {/* Icon */}
+            <span className="text-3xl sm:text-4xl md:text-5xl">{icon}</span>
+
+            {/* Text */}
             <div>
-                <h4 className="mt-4 font-semibold text-lg">{title}</h4>
-                <p className="mt-2 text-slate-500 leading-relaxed">{text}</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold">{title}</h4>
+                <p className="mt-1 text-sm sm:text-base md:text-base text-slate-700 leading-relaxed">
+                    {text}
+                </p>
             </div>
         </article>
     );

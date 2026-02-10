@@ -13,7 +13,7 @@ function Skills() {
     const settings = {
         infinite: true,
         speed: 600,
-        slidesToShow: 3,
+        slidesToShow: 3, // Desktop default
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0px",
@@ -22,10 +22,22 @@ function Skills() {
         pauseOnHover: true,
         afterChange: (current) => setActiveSlide(current),
         responsive: [
-            { breakpoint: 1280, settings: { slidesToShow: 3, centerMode: true } },
-            { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true } },
-            { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true } },
-            { breakpoint: 480, settings: { slidesToShow: 1, centerMode: false } },
+            {
+                breakpoint: 1280, // Desktop/Laptop
+                settings: { slidesToShow: 3, centerMode: true },
+            },
+            {
+                breakpoint: 1024, // Tablet
+                settings: { slidesToShow: 2, centerMode: true },
+            },
+            {
+                breakpoint: 768, // Mobile
+                settings: { slidesToShow: 1, centerMode: false }, // ✅ disable centerMode
+            },
+            {
+                breakpoint: 480, // Small Mobile
+                settings: { slidesToShow: 1, centerMode: false }, // ✅ disable centerMode
+            },
         ],
     };
 
@@ -40,8 +52,8 @@ function Skills() {
                         key={skill.id}
                         onClick={() => sliderRef.current.slickGoTo(index)}
                         className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium transition-all duration-300 ${index === activeSlide
-                                ? "bg-emerald-600 text-white scale-105"
-                                : "bg-gray-300 text-gray-700 hover:bg-emerald-500 hover:text-white"
+                            ? "bg-emerald-600 text-white scale-105"
+                            : "bg-gray-300 text-gray-700 hover:bg-emerald-500 hover:text-white"
                             }`}
                     >
                         {skill.title}
@@ -55,7 +67,7 @@ function Skills() {
                     {skills.map((skill, index) => (
                         <div key={skill.id} className="flex justify-center px-2">
                             <div
-                                className={`transition-transform duration-500 ease-in-out w-full sm:w-80 md:w-96 ${index === activeSlide ? "scale-105 shadow-xl" : "scale-95 shadow-md"
+                                className={`transition-transform duration-500 ease-in-out w-full ${index === activeSlide ? "scale-105 shadow-xl" : "scale-95 shadow-md"
                                     }`}
                             >
                                 <SkillsCard {...skill} />
