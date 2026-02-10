@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* :root {
+  --primary-color: #05df72;
+  --secondary-color: #00a63e;
+  --font-main: "Poppins", sans-serif;
+  --spacing: 16px;
+} */
+
+/* body {
+  font-family: var(--font-main);
+} */
+
+@layer components {
+  .align-elements {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
