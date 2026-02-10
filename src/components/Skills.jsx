@@ -12,35 +12,36 @@ function Skills() {
 
     const settings = {
         infinite: true,
-        speed: 500,
+        speed: 600,
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0px",
-        autoplay: true,          // ✅ Enable auto slide
-        autoplaySpeed: 2000,     // 2.5 seconds per slide
-        pauseOnHover: true,      // pause when mouse hover
+        autoplay: true,
+        autoplaySpeed: 2500,
+        pauseOnHover: true,
         afterChange: (current) => setActiveSlide(current),
         responsive: [
             { breakpoint: 1280, settings: { slidesToShow: 3, centerMode: true } },
             { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true } },
             { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true } },
+            { breakpoint: 480, settings: { slidesToShow: 1, centerMode: false } },
         ],
     };
 
     return (
-        <section id="skills" className="min-h-screen align-elements py-20">
+        <section id="skills" className="min-h-screen py-20 flex flex-col items-center">
             <SectionTitles text="Tech Stack" />
 
-            {/* Buttons to jump to slides */}
-            <div className="flex flex-wrap justify-center gap-4 mt-12 mb-8">
+            {/* Buttons */}
+            <div className="flex flex-wrap justify-center gap-3 mt-12 mb-8">
                 {skills.map((skill, index) => (
                     <button
                         key={skill.id}
                         onClick={() => sliderRef.current.slickGoTo(index)}
-                        className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${index === activeSlide
-                            ? "bg-emerald-600 text-white scale-105"
-                            : "bg-gray-300 text-gray-700 hover:bg-emerald-500 hover:text-white"
+                        className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium transition-all duration-300 ${index === activeSlide
+                                ? "bg-emerald-600 text-white scale-105"
+                                : "bg-gray-300 text-gray-700 hover:bg-emerald-500 hover:text-white"
                             }`}
                     >
                         {skill.title}
@@ -49,12 +50,12 @@ function Skills() {
             </div>
 
             {/* Slider */}
-            <div className="mt-16">
+            <div className="w-full max-w-7xl">
                 <Slider {...settings} ref={sliderRef}>
                     {skills.map((skill, index) => (
                         <div key={skill.id} className="flex justify-center px-2">
                             <div
-                                className={`transition-transform duration-300 ease-in-out ${index === activeSlide ? "scale-105 shadow-xl" : "shadow-md"
+                                className={`transition-transform duration-500 ease-in-out w-full sm:w-80 md:w-96 ${index === activeSlide ? "scale-105 shadow-xl" : "scale-95 shadow-md"
                                     }`}
                             >
                                 <SkillsCard {...skill} />
