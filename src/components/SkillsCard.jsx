@@ -2,7 +2,8 @@ import React from "react";
 
 function SkillsCard({ icon, title, text }) {
     return (
-        <article className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full p-4 sm:p-6 md:p-8 flex flex-col items-center gap-3 sm:gap-4 text-center">
+        <article className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden 
+                        w-full h-full flex flex-col items-center justify-center gap-3 sm:gap-4 text-center p-4 sm:p-6 md:p-8">
             {/* Icon */}
             <span className="text-3xl sm:text-4xl md:text-5xl">{icon}</span>
 
