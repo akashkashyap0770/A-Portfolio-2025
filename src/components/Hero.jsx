@@ -2,6 +2,7 @@ import React from "react";
 import heroImg from "../assets/heroImg.svg";
 import { FaGithubSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import resume from "../assets/AkashDev_2026.pdf";
+import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
     return (
@@ -15,13 +16,25 @@ function Hero() {
                     <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wide">
                         I'm Akash
                     </h1>
+
+                    {/* Typewriter Effect */}
                     <p className="mt-2 text-xl sm:text-2xl lg:text-3xl text-slate-700 capitalize tracking-wide">
-                        Front-End Developer
+                        <Typewriter
+                            words={["Front-End Developer"]}
+                            loop={0} // infinite loop
+                            cursor
+                            cursorStyle="|"
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
                     </p>
+
                     <p className="mt-2 text-base sm:text-lg text-slate-700 tracking-wide">
                         Turning ideas into interactive reality
                     </p>
 
+                    {/* Resume Button */}
                     <div className="mt-4">
                         <a
                             href={resume}
@@ -32,6 +45,7 @@ function Hero() {
                         </a>
                     </div>
 
+                    {/* Social Icons */}
                     <div className="flex justify-center md:justify-start gap-x-4 mt-4">
                         <a
                             href="https://github.com/akashkashyap0770"
