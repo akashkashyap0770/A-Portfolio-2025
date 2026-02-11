@@ -1,16 +1,57 @@
-# React + Vite
+# 🌐 Akash – Web Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Portfolio:** https://a-portfolio-2025.netlify.app/
 
-Currently, two official plugins are available:
+A modern, fully responsive **Frontend Developer Portfolio Website** built using **React + Vite + Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project showcases my skills, work, and contact information in a clean single-page scrolling layout — without using React Router.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Demo
 
-## Expanding the ESLint configuration
+🔗 **Live Website:** https://a-portfolio-2025.netlify.app/  
+🔗 **GitHub Repository:** https://github.com/akashkashyap0770/webdev-portfolio
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ React 19
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🎠 React Slick (Carousel)
+- ✨ React Simple Typewriter
+- 📦 React Icons
+- 🆔 Nanoid
+
+---
+
+## 📌 Key Features
+
+- ✅ Fully Responsive Layout
+- ✅ Smooth Scroll Navigation (No React Router)
+- ✅ Hero with Typewriter Effect
+- ✅ Skill Carousel
+- ✅ Projects Showcase
+- ✅ Contact Form (Formspree)
+- ✅ Fixed Navbar with Scroll Offset
+- ✅ Resume Download Link
+
+---
+
+## 🚀 Installation & Setup
+
+Clone the repo:
+
+```bash
+git clone https://github.com/akashkashyap0770/webdev-portfolio.git
+
+```
+
+Install dependencies: npm install
+
+Start dev server: npm run dev
+
+Build for production: npm run build
+
