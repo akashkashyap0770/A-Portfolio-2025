@@ -23,7 +23,7 @@ function Contact() {
                         </div>
                         <div className="flex items-center gap-3">
                             <FaMapMarkerAlt className="text-emerald-600 w-5 h-5" />
-                            <span>City, Country</span>
+                            <span>Lucknow, Uttar Pradesh, India</span>
                         </div>
                     </div>
                 </article>
